@@ -1,0 +1,6 @@
+[
+    {
+        "name": "Android tool chain",
+        "toolchainFile": "${env:NDK_ROOT}/build/cmake/android.toolchain.cmake"
+    }
+]

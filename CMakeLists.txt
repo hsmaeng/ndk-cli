@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.13.0)
+
+project("My JNI")
+
+add_compile_options(-Wall -Wextra -Werror)
+
+string(TOLOWER ${CMAKE_SYSTEM_NAME} CMAKE_SYSTEM_NAME_LOWER)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/${ANDROID_ABI}/${CMAKE_SYSTEM_NAME_LOWER})
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/${ANDROID_ABI}/${CMAKE_SYSTEM_NAME_LOWER})
+
+add_subdirectory(src)
